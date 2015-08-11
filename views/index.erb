@@ -1,0 +1,20 @@
+<h1 id="title">To Do </h1>
+<p>Here are all your tasks:</p>
+<ul>
+  <% @tasks.each() do |task| %>
+    <li><%= task.description() %></li>
+  <% end %>
+</ul>
+
+<p>Create a new task:</p>
+
+<form action='/output' method="post">
+
+
+  <div class="form-group">
+    <label for="description">To do description</label>
+    <input id="description" name="description" class="form-control" type="text">
+  </div>
+
+  <button type="submit" class="btn">Show Me!</button>
+</form>
